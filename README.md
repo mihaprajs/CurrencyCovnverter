@@ -5,4 +5,4 @@ This is a simple command-line currency converter.
 Currently, the exchange rates are from 12/12/2023. I will try to keep updating the rates every week.
 
 ## Changelog
-V1.0 - First version
+V1.0 - 12/12/2023 (First version)
