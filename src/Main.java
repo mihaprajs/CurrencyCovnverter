@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
+
 public class Main {
     public static void main(String[] args) {
         Scanner valueReader = new Scanner(System.in);
         System.out.print("Select your currency (use ISO 4217 standard): ");
         String originalCurrency = valueReader.nextLine();
-
 
         Scanner newValue = new Scanner(System.in);
         System.out.print("Select the currency you want to convert your money (use ISO 4217 standard): ");
