@@ -1,5 +1,6 @@
 # Currency Converter    
 ### This is a simple command-line currency converter.
+To run this app you need to have java installed on your system.
 
 ## Exchange rates
 Currently, the exchange rates are from 12/12/2023. I will try to keep updating the rates every week.
