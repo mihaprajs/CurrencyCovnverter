@@ -19,7 +19,8 @@ If you don't have it you can download and install it from [OpenJDK](https://open
 
 
 ### V1.1.0-beta1 19/12/2023
-Daly rate updates as of this update.
+Daly rate updates as of this update. You can use more currencies calculations. If selected currency
+hasnt got assigned symbol you will see selected ISO 4217 code in brackets.
 
 ### V1.0.2 - 18/12/2023
 Exchange rates update and build convert from IntelliJ build to Maven build.
