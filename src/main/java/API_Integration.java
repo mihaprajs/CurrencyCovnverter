@@ -1,7 +1,6 @@
 import org.json.*;
 import okhttp3.*;
 import java.io.IOException;
-import java.math.BigDecimal;
 
 public class API_Integration {
     public static double Convert(String currency1, String currency2, double value) throws IOException {

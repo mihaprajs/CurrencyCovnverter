@@ -1,5 +1,4 @@
 import java.io.IOException;
-import java.math.BigDecimal;
 import java.util.Scanner;
 
 
@@ -17,15 +16,19 @@ public class Main {
         System.out.print("Insert amount: ");
         double value = amount.nextDouble();
 
-        double converted = API_Integration.Convert(originalCurrency, newCurrency, value);
-        if (newCurrency.equalsIgnoreCase("EUR")){
-            System.out.println("€" + String.format("%.2f", converted));
-        } else if (newCurrency.equalsIgnoreCase("USD")) {
-            System.out.println("$" + String.format("%.2f", converted));
-        } else if (newCurrency.equalsIgnoreCase("GBP")) {
-            System.out.println("£" + String.format("%.2f", converted));
+        if (originalCurrency.length() != 3 || newCurrency.length() != 3){
+            System.out.println("Error: You selected wrong code. Please ensure that your input is 3 exactly letters long.");
         }else {
-            System.out.println("(" + newCurrency + ")" + String.format("%.2f", converted));
+            double converted = API_Integration.Convert(originalCurrency, newCurrency, value);
+            if (newCurrency.equalsIgnoreCase("EUR")){
+                System.out.println("€" + String.format("%.2f", converted));
+            } else if (newCurrency.equalsIgnoreCase("USD")) {
+                System.out.println("$" + String.format("%.2f", converted));
+            } else if (newCurrency.equalsIgnoreCase("GBP")) {
+                System.out.println("£" + String.format("%.2f", converted));
+            }else {
+                System.out.println("(" + newCurrency.toUpperCase() + ")" + String.format("%.2f", converted));
+            }
         }
     }
 }

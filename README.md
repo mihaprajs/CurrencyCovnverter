@@ -6,8 +6,9 @@ Exchange rates are updating daly. Only 1,500 API request per month as of limit o
 plan from [ExchangeRate-API](https://www.exchangerate-api.com/) this program is using.
 
 ## How to run this program?
-1. You need to have installed Java version 21 or newer on your computer. 
-If you don't have it you can download and install it from [OpenJDK](https://openjdk.org/install/), [Oracle](https://www.oracle.com/java/technologies/downloads/) or any other sources.
+1. You need to have installed Java version 21 or newer on your computer. If you don't have it you can download and 
+install it from [OpenJDK](https://openjdk.org/install/), [Oracle](https://www.oracle.com/java/technologies/downloads/) or any other sources. You also need internet connection, otherwise the 
+exchange rates CANNOT be obtained!
 2. Download Main.java and API_Integration.java files from ./src/java/ folder.
 3. In Terminal or any other Command-line app and open the directory where you have the 
 .java files located.
@@ -16,11 +17,13 @@ If you don't have it you can download and install it from [OpenJDK](https://open
 
 ## Changelog
 
-
+### V1.1.0 20/12/2023
+Added check for invalid currency code length.
 
 ### V1.1.0-beta1 19/12/2023
-Daly rate updates as of this update. You can use more currencies calculations. If selected currency
-hasnt got assigned symbol you will see selected ISO 4217 code in brackets.
+API implementation in this update. Daly rate updates as of this update. You can use more currencies calculations. 
+If selected currency hasn't got assigned symbol you will see selected [ISO 4217 code](https://en.wikipedia.org/wiki/ISO_4217)
+in brackets.
 
 ### V1.0.2 - 18/12/2023
 Exchange rates update and build convert from IntelliJ build to Maven build.
