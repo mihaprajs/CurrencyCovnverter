@@ -46,7 +46,7 @@ public class Converter {
     }
     String input(String str){
         Scanner sc = new Scanner(System.in);
-        System.out.println(str);
+        System.out.print(str);
         return sc.nextLine();
     }
     boolean check(String currency){

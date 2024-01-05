@@ -22,6 +22,9 @@ path to .jar file:
 
 ## Changelog
 
+### V1.1.2 05/01/2024
+Refactored code to be more readable and a few small changes to code.
+
 ### V1.1.1 26/12/2023
 Added check for correct currency code (ISO 4217 standard).
 It replaces previously used check for length.
