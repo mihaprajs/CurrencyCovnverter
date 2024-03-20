@@ -32,12 +32,12 @@
       path to .jar file.
    4. Now you can start using the program.
    
-   ### You may run into problems using Command Prompt (cmd) on Windows. They are related to the character encoding used by default.
+   **You may run into problems using Command Prompt (cmd) on Windows. They are related to the character encoding used by default.**
    
    ## Changelog
    
    ### V2.0.0-beta1 20/03/2024
-   First UI  
+   **GUI** is now part of the program.   
 
    ### V1.1.2 05/01/2024
    Refactored code to be more readable and a few small changes to code.
