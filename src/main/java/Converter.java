@@ -5,7 +5,7 @@ public class Converter {
     String currency1;
     String currency2;
     String value;
-    String[] isoCurrencyCodes = {
+    public String[] isoCurrencyCodes = {
             "AED", "AFN", "ALL", "AMD", "ANG", "AOA", "ARS", "AUD", "AWG", "AZN",
             "BAM", "BBD", "BDT", "BGN", "BHD", "BIF", "BMD", "BND", "BOB", "BOV",
             "BRL", "BSD", "BTN", "BWP", "BYN", "BZD", "CAD", "CDF", "CHE", "CHF",
