@@ -5,7 +5,7 @@
 Exchange rates are updating daly. Only 1,500 API requests per month as of limit on free 
 plan from [ExchangeRate-API](https://www.exchangerate-api.com/) this program is using.
 
-_## How to run this program?
+## How to run this program?
 ### Using UI (main usage)
 1.  You need to have installed Java version 21 or newer on your computer. If you don't have it, you can download and
 install it from [OpenJDK](https://openjdk.org/install/), [Oracle](https://www.oracle.com/java/technologies/downloads/) or any other sources.
