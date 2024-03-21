@@ -4,13 +4,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 
-public class Gui extends JFrame {private JTextField amountTextField;
-
+public class Gui extends JFrame {
+    private JTextField amountTextField;
     private JComboBox<String> fromCurrencyComboBox;
     private JComboBox<String> toCurrencyComboBox;
-    private JButton convertButton;
     private JLabel resultLabel;
-
     private static final String[] CURRENCIES = {
             "AED", "AFN", "ALL", "AMD", "ANG", "AOA", "ARS", "AUD", "AWG", "AZN",
             "BAM", "BBD", "BDT", "BGN", "BHD", "BIF", "BMD", "BND", "BOB", "BOV",
@@ -30,7 +28,6 @@ public class Gui extends JFrame {private JTextField amountTextField;
             "USN", "UYI", "UYU", "UZS", "VES", "VND", "VUV", "WST", "XAF", "XCD",
             "XDR", "XOF", "XPF", "XSU", "XUA", "YER", "ZAR", "ZMW", "ZWL"
     };
-
     public Gui() {
         setTitle("Currency Converter");
         setSize(300, 200);
@@ -38,7 +35,6 @@ public class Gui extends JFrame {private JTextField amountTextField;
         initComponents();
         setVisible(true);
     }
-
     private void initComponents() {
         JPanel panel = new JPanel(new GridLayout(4, 2, 5, 5));
         panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
@@ -58,23 +54,22 @@ public class Gui extends JFrame {private JTextField amountTextField;
         panel.add(toCurrencyLabel);
         panel.add(toCurrencyComboBox);
 
-        convertButton = new JButton("Convert");
+        JButton convertButton = new JButton("Convert");
         resultLabel = new JLabel("Result:");
         panel.add(convertButton);
         panel.add(resultLabel);
 
-        convertButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                try {
-                    convert();
-                } catch (IOException ex) {
-                    throw new RuntimeException(ex);
-                }
-            }
-        });
-
+        convertButton.addActionListener(new ButtonClickListener());
         add(panel, BorderLayout.CENTER);
+    }
+    private class ButtonClickListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            try {
+                convert();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        }
     }
     private void convert() throws IOException {
         double amount = Double.parseDouble(amountTextField.getText());

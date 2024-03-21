@@ -34,6 +34,11 @@ You also need internet connection, otherwise the exchange rates CANNOT be obtain
 
 ## Changelog
 
+### V2.0.0 21/03/2024
+Full release of the program. 
+Convert button is now working using its own ActionListener.
+Code in the command-line version is modified to be compliant with the code for GUI version of the program.
+
 ### V2.0.0-beta2 20/03/2024
 Changes to MANIFEST.MF so that the .jar works now.
 

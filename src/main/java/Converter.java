@@ -2,10 +2,10 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Converter {
-    String currency1;
-    String currency2;
+    String fromCurrency;
+    String toCurrency;
     String value;
-    public String[] isoCurrencyCodes = {
+    private static final String[] CURRENCIES = {
             "AED", "AFN", "ALL", "AMD", "ANG", "AOA", "ARS", "AUD", "AWG", "AZN",
             "BAM", "BBD", "BDT", "BGN", "BHD", "BIF", "BMD", "BND", "BOB", "BOV",
             "BRL", "BSD", "BTN", "BWP", "BYN", "BZD", "CAD", "CDF", "CHE", "CHF",
@@ -25,21 +25,13 @@ public class Converter {
             "XDR", "XOF", "XPF", "XSU", "XUA", "YER", "ZAR", "ZMW", "ZWL"
     };
     Converter() throws IOException {
-        currency1 = input("Select your currency (use ISO 4217 standard): ");
-        currency2 = input("Select the currency you want to convert your money (use ISO 4217 standard): ");
+        fromCurrency = input("Select your currency (use ISO 4217 standard): ");
+        toCurrency = input("Select the currency you want to convert your money (use ISO 4217 standard): ");
         value = input("Insert amount: ");
         int amount = Integer.parseInt(value);
-        if (check(currency1) && check(currency2)){
-            double converted = API_Integration.Convert(currency1, currency2, amount);
-            if (currency2.equalsIgnoreCase("EUR")){
-                System.out.println("€" + String.format("%.2f", converted));
-            } else if (currency2.equalsIgnoreCase("USD")) {
-                System.out.println("$" + String.format("%.2f", converted));
-            } else if (currency2.equalsIgnoreCase("GBP")) {
-                System.out.println("£" + String.format("%.2f", converted));
-            }else {
-                System.out.println("(" + currency2.toUpperCase() + ")" + String.format("%.2f", converted));
-            }
+        if (check(fromCurrency) && check(toCurrency)){
+            double converted = API_Integration.Convert(fromCurrency, toCurrency, amount);
+            System.out.println("Result: " + converted + " " + toCurrency);
         }else {
             System.out.println("Error: You typed wrong code.");
         }
@@ -51,7 +43,7 @@ public class Converter {
     }
     boolean check(String currency){
         boolean found = false;
-        for (String code : isoCurrencyCodes){
+        for (String code : CURRENCIES){
             if (code.equalsIgnoreCase(currency)){
                 found = true;
                 break;
