@@ -6,28 +6,28 @@ Exchange rates are updating daly. Only 1,500 API requests per month as of limit 
 plan from [ExchangeRate-API](https://www.exchangerate-api.com/) this program is using.
 
 _## How to run this program?
-### Using UI
+### Using UI (main usage)
 1.  You need to have installed Java version 21 or newer on your computer. If you don't have it, you can download and
 install it from [OpenJDK](https://openjdk.org/install/), [Oracle](https://www.oracle.com/java/technologies/downloads/) or any other sources.
 You also need internet connection, otherwise the exchange rates CANNOT be obtained!
 2. Download .jar file form "Releases" tab.
 3. In the Terminal or any other Command-line app type or copy this command:
-    ```cmd
-      java -jar /PATH/TO/JAR_FILE/
-    ```
+   ```cmd
+   java -jar /PATH/TO/JAR_FILE/
+   ```
    and replace /PATH/TO/JAR_FILE/ with an actual path to .jar file.
 4. Now you can start using the program.
 
-### Without using UI
+### Without using UI (alternative usage)
 1. You need to have installed Java version 21 or newer on your computer. If you don't have it, you can download and 
 install it from [OpenJDK](https://openjdk.org/install/), [Oracle](https://www.oracle.com/java/technologies/downloads/) or any other sources. 
 You also need internet connection, otherwise the exchange rates CANNOT be obtained!
 2. Download .jar file form "Releases" tab.
 3. In the Terminal or any other Command-line app type or copy this command:
-    ```cmd
-    java -jar -no-gui /PATH/TO/JAR_FILE/
-    ```
-    and replace /PATH/TO/JAR_FILE/ with an actual path to .jar file.
+   ```cmd
+   java -jar -no-gui /PATH/TO/JAR_FILE/
+   ```
+   and replace /PATH/TO/JAR_FILE/ with an actual path to .jar file.
 4. Now you can start using the program.
 
 **You may run into problems using Command Prompt (cmd) on Windows. They are related to the character encoding used by default.**
@@ -37,7 +37,7 @@ You also need internet connection, otherwise the exchange rates CANNOT be obtain
 ### V2.0.0 21/03/2024
 Full release of the program. 
 Convert button is now working using its own ActionListener.
-Code in the command-line version is modified to be compliant with the code for GUI version of the program.
+Code in the command-line version is modified consistency.
 
 ### V2.0.0-beta2 20/03/2024
 Changes to MANIFEST.MF so that the .jar works now.
