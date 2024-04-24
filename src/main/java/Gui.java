@@ -78,7 +78,7 @@ public class Gui extends JFrame {
         if (fromCurrency != null && toCurrency != null){
             double converted = API_Integration.Convert(fromCurrency, toCurrency, amount);
             resultLabel.setText("Result: " + converted + " " + toCurrency);
-        } else {
+        } else { // Should never happen
             JOptionPane.showMessageDialog(this, "Please select both currencies.", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
