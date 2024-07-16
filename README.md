@@ -33,6 +33,9 @@ You also need internet connection, otherwise the exchange rates CANNOT be obtain
 **You may run into problems using Command Prompt (cmd) on Windows. They are related to the character encoding used by default.**
 
 ## Changelog
+### V2.0.2 16/07/2024
+Small changes to the code.
+
 ### V2.0.1 24/04/2024
 Added some comments to make code more understandable.
 
